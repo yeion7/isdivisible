@@ -1,6 +1,6 @@
 import { test } from 'tape';
 import { __ } from 'ramda';
-import isDivisible from '../index.js';
+import isDivisible from '../build/index.js';
 
 test('A passing test', (assert) => {
   assert.pass('This test will pass.');

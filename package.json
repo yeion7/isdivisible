@@ -1,11 +1,15 @@
 {
   "name": "isdivisible",
-  "version": "0.5.0",
+  "version": "0.8.0",
   "description": "return if a number is divisible",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "lint": "eslint index.js",
-    "test": "babel-node test/index.js | tap-spec"
+    "lint": "eslint lib/index.js",
+    "prebuild": "npm run lint",
+    "build": "babel lib --out-dir build",
+    "pretest": "npm run build",
+    "test": "babel-node test/index.js | tap-spec",
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
